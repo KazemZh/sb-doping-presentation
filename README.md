@@ -1,0 +1,3 @@
+run this command:
+
+python -m http.server 8000
