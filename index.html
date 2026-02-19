@@ -14,7 +14,7 @@
     --rwth-blue: #00549F;
     --header-h: 70px;   /* reserved space for header */
     --footer-h: 110px;  /* reserved space for footer area (line + logo) */
-    --content-gap: 28px;
+    --content-gap: 0px;
   }
 
   /* IMPORTANT: avoid clipping fixed overlays */
@@ -360,33 +360,35 @@
         </section>
 
         <!-- Slide 4 -->
-        <section data-title="Sb Doped SnO₂">
+        <section data-title="Sb Doped SnO₂" style="text-align:left;">
           <div class="plot-wrap">
             <div id="plot_sb" class="plotly-container"></div>
           </div>
-          <p class="small">
-            5% of Sb show the best stability with a very low band gap.
-          </p>
+          <ul class="small" style="margin-top:8px;">
+            <li>5% of Sb show the best stability with a very low band gap.</li>
+          </ul>          
         </section>
 
         <!-- Slide 5 -->
-        <section data-title="Sb + X Co-Doped SnO₂">
+        <section data-title="Sb + X Co-Doped SnO₂" style="text-align:left;">
           <div class="plot-wrap">
             <div id="plot_sb_x" class="plotly-container"></div>
           </div>
-          <p class="small">
-            Sb with Ti, Nb, or Zr co-dopants improve significantly the stability of SnO₂, keeping 5% of Sb with high concentration (25 %) of other dopant gives also the best stability, while saving a zero band gab is zero for many cases. 
-          </p>
+          <ul class="small" style="margin-top:8px;">
+            <li>Ti/Nb/Zr co-doping significantly enhances stability.</li>
+            <li>Higher Ti, Nb, or Zr % with low Sb % leads to further stabilization.</li>
+            <li>Nb yields lower band gaps than Ti or Zr, but relatively reduced stability.</li>
+          </ul>
         </section>
 
         <!-- Slide 6 -->
-        <section data-title="Sb + X + Y Tri-Doped SnO₂">
+        <section data-title="Sb + X + Y Tri-Doped SnO₂" style="text-align:left;">
           <div class="plot-wrap">
             <div id="plot_sb_x_y" class="plotly-container"></div>
           </div>
-          <p class="small">
-            Sb with Ti, Nb, or Zr co-dopants improve significantly the stability of SnO₂, keeping 5% of Sb with high concentration (25 %) of other dopant gives also the best stability, while saving a zero band gab is zero for many cases. 
-          </p>
+          <ul class="small" style="margin-top:8px;">
+            <li>Ranges are similar to the co-doping results.</li>
+          </ul>
         </section>
 
         <!-- Slide 7 -->
@@ -410,9 +412,9 @@
         </section>         
 
         <!-- Slide 9 -->
-        <section data-title="Sb + Zn + X Tri-Doped SnO₂">
+        <section data-title="Sb + Zr + X Tri-Doped SnO₂">
           <div class="plot-wrap">
-            <div id="plot_sb_zn_x" class="plotly-container"></div>
+            <div id="plot_sb_zr_x" class="plotly-container"></div>
           </div>
           <p class="small">
             Hover points for composition-level stats (mean/std/min, #candidates).
@@ -422,7 +424,7 @@
         <!-- Slide 10 -->
         <section data-title="Next Steps">
           <ul>
-            <li>Extend to triple doping: Sb + (Zn / Nb / Ti) + X</li>
+            <li>Extend to triple doping: Sb + (Zr / Nb / Ti) + X</li>
             <li>Promote top candidates to DFT validation</li>
             <li>Connect screening to IrOx/support conductivity constraints</li>
           </ul>
@@ -472,7 +474,7 @@
       loadPlot("plot_sb_x_y", "./sb_x_y.json");
       loadPlot("plot_sb_ti_x", "./sb_ti_x.json");
       loadPlot("plot_sb_nb_x", "./sb_nb_x.json");
-      loadPlot("plot_sb_zn_x", "./sb_zn_x.json");
+      loadPlot("plot_sb_zr_x", "./sb_zr_x.json");
 
       // Resize helper
       function resizePlots() {
@@ -481,7 +483,7 @@
         const p3 = document.getElementById("plot_sb_ti_x");
         const p4 = document.getElementById("plot_sb_x_y");
         const p5 = document.getElementById("plot_sb_nb_x");
-        const p6 = document.getElementById("plot_sb_zn_x");
+        const p6 = document.getElementById("plot_sb_zr_x");
 
         // small delay helps Reveal finish layout/transition
         setTimeout(() => {
