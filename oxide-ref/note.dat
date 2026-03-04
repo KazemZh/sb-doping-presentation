@@ -2,4 +2,4 @@ ALIGNN (MBJ): Atomistic Line Graph Neural Network (Modified Becke–Johnson pote
 M3GNet: materials graph neural network architecture that incorporates 3-body interactions
 
 SnO2 super cell: 3x2x2
-Oxide references: Sn2O3, TiO2, ZrO2, Nb2O5
+Oxide references: Sb2O3, TiO2, ZrO2, Nb2O5
