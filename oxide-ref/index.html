@@ -277,26 +277,22 @@
               <ul style="font-size:0.92em; line-height:1.35;">
                 <li><b>Host:</b> SnO₂ (dopants substitute <b>Sn</b>)</li>
                 <li><b>Fixed dopant:</b> <b>Sb</b></li>
-                <li><b>Additional dopants (0, 1, or 2):</b></li>
+                <li><b>Co-dopants:</b></li>
               </ul>
 
               <div style="margin-top:8px; margin-left:100px; margin-right:100px; display:flex; flex-wrap:wrap; gap:20px;">
-                <span style="padding:2px 8px; border:1px solid #ddd; border-radius:999px;">Nb</span>
-                <span style="padding:2px 8px; border:1px solid #ddd; border-radius:999px;">Ba</span>
                 <span style="padding:2px 8px; border:1px solid #ddd; border-radius:999px;">Ti</span>
                 <span style="padding:2px 8px; border:1px solid #ddd; border-radius:999px;">Zr</span>
-                <span style="padding:2px 8px; border:1px solid #ddd; border-radius:999px;">Mn</span>
-                <span style="padding:2px 8px; border:1px solid #ddd; border-radius:999px;">Ni</span>
-                <span style="padding:2px 8px; border:1px solid #ddd; border-radius:999px;">Fe</span>
-                <span style="padding:2px 8px; border:1px solid #ddd; border-radius:999px;">Zn</span>
+                <span style="padding:2px 8px; border:1px solid #ddd; border-radius:999px;">Nb</span>                
               </div>
             </div>
 
             <div>
               <h4 style="margin-bottom:8px;">Concentration rules</h4>
               <ul style="font-size:0.9em; line-height:1.4;">
-                <li>Each dopant concentration varies in <b>5%</b> steps (relative to <b>Sn</b> sites).</li>
-                <li><b>Total doping:</b> 5%, 10%, 15%, 20%, 25%, 30%</li>
+                <li>Each dopant concentration varies in <b>~5%</b> steps (relative to <b>Sn</b> sites).</li>
+                <li><b>Total doping:</b> 4.67%, 8.33%, 16,67%, 20.83
+                  %</li>
               </ul>
             </div>
 
@@ -328,8 +324,8 @@
               <ul>
                 <li>\(E_{\mathrm{doped}}\): total energy of doped structure</li>
                 <li>\(E_{\mathrm{pristine}}\): pristine SnO\(_2\)</li>
-                <li>\(n_i\): number of atoms of species \(i\)</li>
-                <li>\(\mu_i\): chemical potential of species \(i\)</li>
+                <li>\(n_i\): number of atoms of species \(i\) = {Sb, Ti, Zr, Nb} </li>
+                <li>\(\mu_i\): chemical potential of species \(i\)</li> calculated from oxide references (Sn\(_2\)O\(_3\), TiO\(_2\), ZrO\(_2\), Nb\(_2\)O\(_5\))
               </ul>
 
               <p class="small">
@@ -360,92 +356,51 @@
         </section>
 
         <!-- Slide 4 -->
-        <section data-title="Sb" style="text-align:left;">
+        <section data-title="Sb: Formation energy" style="text-align:left;">
           <div class="plot-wrap">
             <div id="plot_sb" class="plotly-container"></div>
           </div>
           <ul class="small" style="margin-top:8px;">
-            <li>5% of Sb show the best stability with a very low band gap.</li>
+            <li>4.67% of Sb show the best stability with low band gap.</li>
           </ul>          
         </section>
 
         <!-- Slide 5 -->
-        <section data-title="Sb + X" style="text-align:left;">
+        <section data-title="Sb + X: Formation Energy" style="text-align:left;">
           <div class="plot-wrap">
-            <div id="plot_sb_x" class="plotly-container"></div>
+            <div id="plot_sb_x-ef" class="plotly-container"></div>
           </div>
           <ul class="small" style="margin-top:8px;">
-            <li>Ti/Nb/Zr co-doping significantly enhances stability.</li>
-            <li>Higher Ti, Nb, or Zr % with low Sb % leads to further stabilization.</li>
-            <li>Nb yields lower band gaps than Ti or Zr, but relatively reduced stability.</li>
+            <li><b>Ti</b> and <b>Zr</b> co-doping maintains the thermodynamic stability of Sb-doped SnO₂.</li>
+            <li>Nb co-doping shows mixed behavior.</li>
+            <li>The most favorable stability occurs for moderate Sb with low Zr or Ti content.</li>
           </ul>
         </section>
 
         <!-- Slide 6 -->
-        <section data-title="Sb + X + Y" style="text-align:left;">
+        <section data-title="Sb + X: Band Gap" style="text-align:left;">
           <div class="plot-wrap">
-            <div id="plot_sb_x_y" class="plotly-container"></div>
+            <div id="plot_sb_x-bg" class="plotly-container"></div>
           </div>
           <ul class="small" style="margin-top:8px;">
-            <li>Ranges are comparable to co-doping, although some structures exceed the previous band-gap range.</li>
+            <li>Band gaps are nearly unchanged across Ti, Zr, and Nb co-doping.</li>
           </ul>
         </section>
-
-        <!-- Slide 7 -->
-        <section data-title="Sb + Ti + X" style="text-align:left;">
-          <div class="plot-wrap">
-            <div id="plot_sb_ti_x" class="plotly-container"></div>
-          </div>
-            <ul class="small" style="margin-top:8px;">
-              <li>Combining Ti with Zr further improves stability; Nb also maintains high stability.</li>
-              <li>Minor addition of a third dopant preserves stability: Ranking: Zn > Mn > Ba > Fe > Ni.
-              </li>
-            </ul>
-        </section>        
-
-        <!-- Slide 8 -->
-        <section data-title="Sb + Nb + X" style="text-align:left;">
-          <div class="plot-wrap">
-            <div id="plot_sb_nb_x" class="plotly-container"></div>
-          </div>
-            <ul class="small" style="margin-top:8px;">
-              <li>Adding Ti or Zr enhances stability.</li>
-              <li>Small additions of a third dopant maintain good stability: Ranking: Zn > Ba > Mn > Fe > Ni.
-              </li>
-            </ul>
-        </section>         
-
-        <!-- Slide 9 -->
-        <section data-title="Sb + Zr + X" style="text-align:left;">
-          <div class="plot-wrap">
-            <div id="plot_sb_zr_x" class="plotly-container"></div>
-          </div>
-            <ul class="small" style="margin-top:8px;">
-              <li>Combining Zr with Ti or Nb preserves high stability.</li>
-              <li>Small additions of a third dopant maintain good stability: Ranking: Zn > Mn > Ba > Fe > Ni.
-              </li>
-              <li>Ba tends to increase the band gap more than other dopants.</li>
-            </ul>
-        </section> 
+       
         
-        <!-- Slide 10 -->
-        <section data-title="Conclusions & Experimental Outlook" style="text-align:left;">
+        <!-- Final Slide -->
+        <section data-title="Main Conclusions & Outlook" style="text-align:left;">
 
           <ul class="small" style="margin-top:8px;">
-            <li>The model correctly reproduces the known experimental optimum at <b>~5% Sb</b>.</li>
-            <li>Ti, Nb, or Zr co-doping provides additional stabilization beyond pure Sb doping.</li>
-            <li>Nb reduces the band gap more strongly, but with slightly reduced stability.</li>
-            <li>Adding a third dopant to Ti-, Nb-, or Zr-based systems preserves stability trends; Zn is the most favorable third dopant.</li>
-          </ul>
+            <li>The best stability (while keeping a low band gap) is obtained around <b>~5% Sb</b>.</li>
 
-          <div style="margin-top:20px;">
-            <h4 style="margin-bottom:8px;">Experimental suggestions:</h4>
-            <ul class="small">
-              <li>Focus on <b>5% Sb + 20–25% Ti or Zr</b> for enhanced stability.</li>
-              <li>Consider Nb-containing systems when conductivity is prioritized.</li>
-              <li>Evaluate Zn as a stabilizing third dopant in multi-doped systems.</li>
-            </ul>
-          </div>
+            <li></b> <b>Ti</b> and <b>Zr</b> maintain thermodynamic stability (negative formation energies), while <b>Nb</b> shows mixed behavior and can become unfavorable.</li>
+
+            <li> The <b>average band gap changes only weakly</b> across the tested Ti/Zr/Nb co-doping compositions (small spread), indicating limited sensitivity in this range.</li>
+
+            <li><b>Outlook:</b> Extend the screening to <b>additional co-dopants</b> and systematically explore <b>tri-dopants (Sb + X + Y)</b> to search for improved stability–bandgap trade-offs.</li>
+          </ul>
+        </section>
 
 </section>
 
@@ -489,18 +444,15 @@
       }
 
       // Load both plots (safe even if one slide isn’t visible yet)
-      loadPlot("plot_sb", "./sb.json");
-      loadPlot("plot_sb_x", "./sb_x.json");
-      loadPlot("plot_sb_x_y", "./sb_x_y.json");
-      loadPlot("plot_sb_ti_x", "./sb_ti_x.json");
-      loadPlot("plot_sb_nb_x", "./sb_nb_x.json");
-      loadPlot("plot_sb_zr_x", "./sb_zr_x.json");
+      loadPlot("plot_sb", "./sb-ef.json");
+      loadPlot("plot_sb_x-ef", "./sb_x-ef.json");
+      loadPlot("plot_sb_x-bg", "./sb_x-bg.json");
 
       // Resize helper
       function resizePlots() {
         const p1 = document.getElementById("plot_sb");
-        const p2 = document.getElementById("plot_sb_x");
-        const p3 = document.getElementById("plot_sb_ti_x");
+        const p2 = document.getElementById("plot_sb_x-ef");
+        const p3 = document.getElementById("plot_sb_x-bg");
         const p4 = document.getElementById("plot_sb_x_y");
         const p5 = document.getElementById("plot_sb_nb_x");
         const p6 = document.getElementById("plot_sb_zr_x");
